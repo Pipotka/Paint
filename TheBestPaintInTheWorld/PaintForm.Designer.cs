@@ -88,7 +88,7 @@
             SizeBitton.Size = new Size(42, 40);
             SizeBitton.TabIndex = 2;
             SizeBitton.UseVisualStyleBackColor = false;
-            SizeBitton.Click += SizeBitton_Click;
+            SizeBitton.Click += SizeBittonClick;
             // 
             // HideButton
             // 
@@ -102,7 +102,7 @@
             HideButton.Size = new Size(42, 40);
             HideButton.TabIndex = 1;
             HideButton.UseVisualStyleBackColor = false;
-            HideButton.Click += HideButton_Click;
+            HideButton.Click += HideButtonClick;
             // 
             // CloseButton
             // 
@@ -116,7 +116,7 @@
             CloseButton.Size = new Size(42, 40);
             CloseButton.TabIndex = 0;
             CloseButton.UseVisualStyleBackColor = false;
-            CloseButton.Click += CloseButton_Click;
+            CloseButton.Click += CloseButtonClick;
             // 
             // menuStrip
             // 
@@ -140,28 +140,28 @@
             ToolStripCircle.Name = "ToolStripCircle";
             ToolStripCircle.Size = new Size(163, 22);
             ToolStripCircle.Text = "Круг";
-            ToolStripCircle.Click += ToolStripCircle_Click;
+            ToolStripCircle.Click += ToolStripCircleClick;
             // 
             // ToolStripElips
             // 
             ToolStripElips.Name = "ToolStripElips";
             ToolStripElips.Size = new Size(163, 22);
             ToolStripElips.Text = "Элепс";
-            ToolStripElips.Click += ToolStripElips_Click;
+            ToolStripElips.Click += ToolStripElipsClick;
             // 
             // ToolStripRectangle
             // 
             ToolStripRectangle.Name = "ToolStripRectangle";
             ToolStripRectangle.Size = new Size(163, 22);
             ToolStripRectangle.Text = "Прямоугольник";
-            ToolStripRectangle.Click += ToolStripRectangle_Click;
+            ToolStripRectangle.Click += ToolStripRectangleClick;
             // 
             // ToolStripFill
             // 
             ToolStripFill.Name = "ToolStripFill";
             ToolStripFill.Size = new Size(64, 20);
             ToolStripFill.Text = "Заливка";
-            ToolStripFill.Click += ToolStripFill_Click;
+            ToolStripFill.Click += ToolStripFillClick;
             // 
             // ToolStripErase
             // 
@@ -169,28 +169,28 @@
             ToolStripErase.Name = "ToolStripErase";
             ToolStripErase.Size = new Size(62, 20);
             ToolStripErase.Text = "Стереть";
-            ToolStripErase.Click += ToolStripErase_Click;
+            ToolStripErase.Click += ToolStripEraseClick;
             // 
             // ToolStripOutlineСolor
             // 
             ToolStripOutlineСolor.Name = "ToolStripOutlineСolor";
             ToolStripOutlineСolor.Size = new Size(92, 20);
             ToolStripOutlineСolor.Text = "Цвет контура";
-            ToolStripOutlineСolor.Click += ToolStripOutlineСolor_Click;
+            ToolStripOutlineСolor.Click += ToolStripOutlineСolorClick;
             // 
             // ToolStripFillColor
             // 
             ToolStripFillColor.Name = "ToolStripFillColor";
             ToolStripFillColor.Size = new Size(92, 20);
             ToolStripFillColor.Text = "Цвет заливки";
-            ToolStripFillColor.Click += ToolStripFillColor_Click;
+            ToolStripFillColor.Click += ToolStripFillColorClick;
             // 
             // ToolStripBackgroundColor
             // 
             ToolStripBackgroundColor.Name = "ToolStripBackgroundColor";
             ToolStripBackgroundColor.Size = new Size(77, 20);
             ToolStripBackgroundColor.Text = "Цвет фона";
-            ToolStripBackgroundColor.Click += ToolStripBackgroundColor_Click;
+            ToolStripBackgroundColor.Click += ToolStripBackgroundColorClick;
             // 
             // PaintWindow
             // 
@@ -203,8 +203,9 @@
             MainMenuStrip = menuStrip;
             Name = "PaintWindow";
             Text = "The best Paint";
-            MouseDown += PaintWindow_MouseDown;
-            MouseUp += PaintWindow_MouseUp;
+            MouseDoubleClick += PaintWindowMouseDoubleClick;
+            MouseDown += PaintWindowMouseDown;
+            MouseUp += PaintWindowMouseUp;
             Header.ResumeLayout(false);
             Header.PerformLayout();
             ButtonPanel.ResumeLayout(false);

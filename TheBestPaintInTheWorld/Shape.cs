@@ -8,75 +8,28 @@ namespace TheBestPaintInTheWorld
 {
     struct Shape
     {
-        public bool IsFill
+        public bool IsFill { get; set; }
+        public SolidBrush FillColor { get; set; }
+        public Pen Outline { get; set; }
+        public Shapes TypeOfShape { get; set; }
+        public Rectangle BoundingBox { get; set; }
+
+        public Shape(Pen outline, SolidBrush fillColor, Shapes shape, Rectangle boundingBox)
         {
-            set
-            {
-                if (value is bool)
-                {
-                    IsFill = value;
-                }
-            }
-            get
-            {
-                return IsFill;
-            }
+            Outline = new Pen(outline.Color);
+            Outline.Width = 3.0f;
+            FillColor = new SolidBrush(fillColor.Color);
+            IsFill = true;
+            TypeOfShape = shape;
+            BoundingBox = boundingBox;
         }
-        public SolidBrush FillColor
+        public Shape(Pen outline, Shapes shape, Rectangle boundingBox)
         {
-            set
-            {
-                if (value is SolidBrush)
-                {
-                    FillColor = value;
-                }
-            }
-            get
-            {
-                return FillColor;
-            }
-        }
-        public Pen Outline
-        {
-            set
-            {
-                if (value is Pen)
-                {
-                    Outline = value;
-                }
-            }
-            get
-            {
-                return Outline;
-            }
-        }
-        public Shapes TypeOfShape
-        {
-            set
-            {
-                if (value is Shapes)
-                {
-                    TypeOfShape = value;
-                }
-            }
-            get
-            {
-                return TypeOfShape;
-            }
-        }
-        public Rectangle BoundingBox
-        {
-            set
-            {
-                if (value is Rectangle)
-                {
-                    BoundingBox = value;
-                }
-            }
-            get
-            {
-                return BoundingBox;
-            }
+            Outline = new Pen(outline.Color);
+            Outline.Width = 3.0f;
+            IsFill = false;
+            TypeOfShape = shape;
+            BoundingBox = boundingBox;
         }
     }
 }
